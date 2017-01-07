@@ -9,7 +9,7 @@
       table { border-collapse: collapse; }
       thead { font-weight: bold; }
       td { border: 1px #ccc solid; text-align: left; padding: 0.5rem; }
-      #full-calendar td:first-child {font-style: italic; color: #888; }
+      #full-calendar-table td:first-child {font-style: italic; color: #888; }
     </style>
   </head>
   <body>
@@ -17,8 +17,11 @@
       <h1>Monthless Calendar Proposal</h1>
       <p>Today is <i id="today-regular"></i>...</p>
       <p>... but should be <b id="today-monthless"></b>.</p>
+      <p>
+        <small><a href="#comparison">Comparison</a> - <a href="#full-calendar">Full Calendar</a></small>
+      </p>
     </header>
-    <article class="description">
+    <article>
       <h3>Why ?</h3>
       <ul>
         <li>Mental overhead to keep track of the date (due to months irregularities)</li>
@@ -34,8 +37,8 @@
         <li>All years start on a Monday (weeks will be the same every year)</li>
       </ul>
     </article>
-    <article class="match">
-      <h3>Matching Dates For <span id="current-year"></span></h3>
+    <article>
+      <h3 id="comparison">Comparison For <span id="current-year"></span></h3>
       <table>
         <thead>
           <tr>
@@ -46,12 +49,12 @@
         <tbody id="dates"></tbody>
       </table>
     </article>
-    <article class="calendar">
-      <h3>Full Calendar</h3>
+    <article>
+      <h3 id="full-calendar">Full Calendar</h3>
       <p>
         <i>For pretty much every year.</i>
       </p>
-      <table id="full-calendar">
+      <table id="full-calendar-table">
         <thead>
           <tr>
             <td>Week</td>
